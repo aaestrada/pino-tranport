@@ -1,0 +1,16 @@
+{
+  "name": "pino-pretty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node . | pino-pretty --config=.pino-prettyrc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "hapi-pino": "^9.1.0"
+  }
+}
