@@ -60,7 +60,7 @@ async function start() {
       transport: {
         targets: [
           {
-            target: "pino-file.js",
+            target: "pino/file",
             options: {
               destination: 1
             }
