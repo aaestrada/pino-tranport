@@ -39,24 +39,11 @@ async function start() {
       }
     }
   });
-
-  // const transport = pino.transport({
-  //   pipeline: [
-  //     {
-  //         target: './my-transform.mjs'
-  //     }, 
-  //     {
-  //         target: './to-file-transport.js',
-  //         options: { 
-  //           destination: 'logs/.logs.log'
-  //         }
-  //     }
-  // ]
-  // });
   
   await server.register({
     plugin: hapiPino,
     options: {
+      ignoredEventTags: { log: ['client'], request: '*' },
       transport: {
         targets: [
           {
